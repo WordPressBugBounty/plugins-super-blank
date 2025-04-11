@@ -21,10 +21,10 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px"},"margin":{"top":"0rem"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-<div class="wp-block-group" style="margin-top:0rem;padding-right:0px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"margin":{"top":"0px"}}},"layout":{"type":"constrained","contentSize":"217px","justifyContent":"center"}} -->
+<div class="wp-block-group" style="margin-top:0rem;padding-right:0px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"margin":{"top":"0px"}}},"layout":{"type":"constrained","contentSize":"240px","justifyContent":"center"}} -->
 <div class="wp-block-group" style="margin-top:0px"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"bold","textColor":"white","style":{"spacing":{"padding":{"left":"48px","right":"48px","top":"20px","bottom":"20px"}},"typography":{"lineHeight":"1.1","fontSize":"1.4rem","letterSpacing":"0.44px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px"}}} -->
-<div class="wp-block-button has-custom-font-size" style="font-size:1.4rem;font-style:normal;font-weight:600;letter-spacing:0.44px;line-height:1.1"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background wp-element-button" style="border-radius:64px;padding-top:20px;padding-right:48px;padding-bottom:20px;padding-left:48px">CTA Button</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-custom-font-size wp-element-button" style="border-radius:64px;padding-top:20px;padding-right:48px;padding-bottom:20px;padding-left:48px;font-size:1.4rem;font-style:normal;font-weight:600;letter-spacing:0.44px;line-height:1.1">CTA Button</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

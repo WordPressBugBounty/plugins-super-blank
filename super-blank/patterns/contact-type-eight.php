@@ -6,7 +6,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["sectionsitem"],"patternName":"blank-pack/contact-eight","name":"Contact 8"},"align":"full","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"2.71rem"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained","wideSize":"1140px","contentSize":"1140px"}} -->
+<!-- wp:group {"metadata":{"categories":[""],"patternName":"blank-pack/contact-eight","name":"Contact 8"},"align":"full","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"2.71rem"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained","wideSize":"1140px","contentSize":"1140px"}} -->
 <div class="wp-block-group alignfull has-bold-color has-text-color has-link-color" style="padding-top:10rem;padding-right:var(--wp--preset--spacing--40);padding-bottom:10rem;padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"right":"0","left":"0"},"blockGap":{"top":"4.01rem","left":"7vw"},"margin":{"right":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignwide" style="margin-right:0;margin-left:0;padding-right:0;padding-left:0"><!-- wp:column {"width":"48%"} -->
 <div class="wp-block-column" style="flex-basis:48%"><!-- wp:image {"id":247,"sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"16px"}}} -->
@@ -25,10 +25,10 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px"},"margin":{"top":"2rem"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-<div class="wp-block-group" style="margin-top:2rem;padding-right:0px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"margin":{"top":"0px"}}},"layout":{"type":"constrained","contentSize":"217px","justifyContent":"center"}} -->
+<div class="wp-block-group" style="margin-top:2rem;padding-right:0px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"margin":{"top":"0px"}}},"layout":{"type":"constrained","contentSize":"240px","justifyContent":"center"}} -->
 <div class="wp-block-group" style="margin-top:0px"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"bold","textColor":"white","style":{"spacing":{"padding":{"left":"48px","right":"48px","top":"20px","bottom":"20px"}},"typography":{"lineHeight":"1.1","fontSize":"1.4rem","letterSpacing":"0.44px"},"border":{"radius":"64px"}},"fontFamily":"inter-display-semibold"} -->
-<div class="wp-block-button has-custom-font-size has-inter-display-semibold-font-family" style="font-size:1.4rem;letter-spacing:0.44px;line-height:1.1"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background wp-element-button" style="border-radius:64px;padding-top:20px;padding-right:48px;padding-bottom:20px;padding-left:48px">CTA Button</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-inter-display-semibold-font-family has-custom-font-size wp-element-button" style="border-radius:64px;padding-top:20px;padding-right:48px;padding-bottom:20px;padding-left:48px;font-size:1.4rem;letter-spacing:0.44px;line-height:1.1">CTA Button</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

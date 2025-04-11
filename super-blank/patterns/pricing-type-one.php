@@ -25,8 +25,8 @@
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"6rem"}}}} -->
 <div class="wp-block-columns alignwide" style="margin-top:6rem"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.5rem","right":"2.5rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border-color has-bold-color has-text-color has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:heading {"level":6,"style":{"typography":{"textTransform":"capitalize","fontSize":"1.1rem"}},"fontFamily":"inter-display-semibold"} -->
+<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.2rem","right":"2.2rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-bold-color has-text-color has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;padding-top:2.5rem;padding-right:2.2rem;padding-bottom:2.5rem;padding-left:2.2rem"><!-- wp:heading {"level":6,"style":{"typography":{"textTransform":"capitalize","fontSize":"1.1rem"}},"fontFamily":"inter-display-semibold"} -->
 <h6 class="wp-block-heading has-inter-display-semibold-font-family" style="font-size:1.1rem;text-transform:capitalize">Basic plan</h6>
 <!-- /wp:heading -->
 
@@ -72,7 +72,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem","letterSpacing":"0.5px"}}} -->
-<p style="font-size:1.1rem;letter-spacing:0.5px"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt="">  Basic reporting and analytics</p>
+<p style="font-size:1.1rem;letter-spacing:0.5px"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt=""> Basic reporting and analytics</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem","letterSpacing":"0.5px"}}} -->
@@ -87,11 +87,11 @@
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"4rem"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-top:4rem"><!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"bold","textColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"bold"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-bold-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Get started</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-bold-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Get started</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"white","textColor":"bold","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"bold"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-bold-color has-white-background-color has-text-color has-background has-border-color has-bold-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Chat to sales</a></div>
+<!-- wp:button {"backgroundColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"},"color":{"text":"#2f394d"}},"borderColor":"bold"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-background-color has-text-color has-background has-border-color has-bold-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;color:#2f394d;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Chat to sales</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -99,8 +99,8 @@
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.5rem","right":"2.5rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"bold","textColor":"white","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border-color has-white-color has-bold-background-color has-text-color has-background has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.5rem","right":"2.5rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#303a4d"}},"textColor":"white","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-white-color has-text-color has-background has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;background-color:#303a4d;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":6,"style":{"typography":{"textTransform":"capitalize","fontSize":"1.1rem"}},"fontFamily":"inter-display-semibold"} -->
 <h6 class="wp-block-heading has-inter-display-semibold-font-family" style="font-size:1.1rem;text-transform:capitalize">Business plan</h6>
 <!-- /wp:heading -->
@@ -168,12 +168,12 @@
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"4rem"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-top:4rem"><!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"bold","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"bold"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-bold-color has-white-background-color has-text-color has-background has-border-color has-bold-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Get started</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"},"color":{"text":"#2f394d"}},"borderColor":"bold"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-background-color has-text-color has-background has-border-color has-bold-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;color:#2f394d;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Get started</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"backgroundColor":"bold","textColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"white"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-white-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Chat to sales</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-white-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Chat to sales</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
@@ -181,8 +181,8 @@
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.5rem","right":"2.5rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border-color has-bold-color has-text-color has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem"><!-- wp:heading {"level":6,"style":{"typography":{"textTransform":"capitalize","fontSize":"1.1rem"}},"fontFamily":"inter-display-semibold"} -->
+<div class="wp-block-column"><!-- wp:group {"style":{"border":{"width":"1px","color":"#E1E4EB","radius":"8px"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2.2rem","right":"2.2rem"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|bold"}}}},"textColor":"bold","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border-color has-bold-color has-text-color has-link-color" style="border-color:#E1E4EB;border-width:1px;border-radius:8px;padding-top:2.5rem;padding-right:2.2rem;padding-bottom:2.5rem;padding-left:2.2rem"><!-- wp:heading {"level":6,"style":{"typography":{"textTransform":"capitalize","fontSize":"1.1rem"}},"fontFamily":"inter-display-semibold"} -->
 <h6 class="wp-block-heading has-inter-display-semibold-font-family" style="font-size:1.1rem;text-transform:capitalize">Enterprise plan</h6>
 <!-- /wp:heading -->
 
@@ -218,8 +218,8 @@
 <p style="font-size:1.1rem">Basic features for up to 10 users.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"top":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40)"><!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem"}}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","margin":{"top":"var:preset|spacing|40"},"padding":{"right":"var:preset|spacing|40","left":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem"}}} -->
 <p style="font-size:1.1rem"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt="">  Access to basic features</p>
 <!-- /wp:paragraph -->
 
@@ -228,7 +228,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem"}}} -->
-<p style="font-size:1.1rem"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt="">  Basic reporting and analytics</p>
+<p style="font-size:1.1rem"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt=""> Basic reporting and analytics </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem"}}} -->
@@ -236,18 +236,18 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1rem"}}} -->
-<p style="font-size:1.1rem"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt="">  Basic chat and email support</p>
+<p style="font-size:1.1rem"><img class="wp-image-161" style="width: 16px;" src="<?php echo esc_url( SUPER_BLANK_PLUGIN_URL  ); ?>assets/images/Icon-tick.svg" alt=""> Basic chat and email support </p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"4rem"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-top:4rem"><!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"bold","textColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"bold"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-bold-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Get started</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-color has-bold-background-color has-text-color has-background has-border-color has-bold-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Get started</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button {"backgroundColor":"white","textColor":"bold","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"}},"borderColor":"bold"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size is-style-fill" style="font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1"><a class="wp-block-button__link has-bold-color has-white-background-color has-text-color has-background has-border-color has-bold-border-color wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px">Chat to sales</a></div>
+<!-- wp:button {"backgroundColor":"white","width":100,"className":"is-style-fill","style":{"spacing":{"padding":{"left":"24px","right":"24px","top":"12px","bottom":"12px"}},"typography":{"lineHeight":"1.1","fontSize":"1.1rem","letterSpacing":"0.36px","fontStyle":"normal","fontWeight":"600"},"border":{"radius":"64px","style":"solid","width":"2px"},"color":{"text":"#2f394d"}},"borderColor":"bold"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-fill"><a class="wp-block-button__link has-white-background-color has-text-color has-background has-border-color has-bold-border-color has-custom-font-size wp-element-button" style="border-style:solid;border-width:2px;border-radius:64px;color:#2f394d;padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;font-size:1.1rem;font-style:normal;font-weight:600;letter-spacing:0.36px;line-height:1.1">Chat to sales</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
