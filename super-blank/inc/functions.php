@@ -347,6 +347,8 @@ if (!function_exists('superBlankDeleteExactOptions')) {
     function superBlankDeleteExactOptions($options = [])
     {
 
+        if(is_multisite()) return;
+
         if (empty($options)) return;
 
         global $wpdb;
@@ -371,7 +373,7 @@ if (!function_exists('superBlankDeleteOptionsByPattern')) {
      * @return void
      */
     function superBlankDeleteOptionsByPattern($patterns = [])
-    {
+    {        
 
         if (!is_array($patterns)) return;
 
@@ -624,5 +626,174 @@ if (!function_exists('superBlankParseElementorSections')) {
         }
 
         return $sections;
+    }
+}
+
+/**
+ * Check if Astra theme is installed and network-enabled
+ * 
+ * @return void
+ */
+if (!function_exists('superBlankCheckAstraTheme')) {
+    /**
+     * Check if Astra theme is installed and network-enabled
+     * 
+     * @return void
+     */
+    function superBlankCheckAstraTheme()
+    {
+        if (!is_multisite()) return;
+
+        $astra = wp_get_theme('astra'); // Check if Astra theme exists
+
+        // Astra not installed
+        if (!$astra->exists()) {
+            echo '<div class="notice notice-error"><p><strong>Super Blank Plugin requires the Astra theme.</strong><br>Please go to the <a href="' . network_admin_url('theme-install.php') . '">Network Admin → Themes</a> and install it.</p></div>';
+            return;
+        }
+
+        // Check if Astra theme is allowed for the current site
+        $allowed_themes = get_site_option('allowedthemes');
+
+        // If allowedthemes is empty, all themes are allowed
+        if (empty($allowed_themes)) {
+            return;
+        }
+
+        // Check if Astra is allowed for this site
+        if (!isset($allowed_themes['astra']) || !$allowed_themes['astra']) {
+            echo '<div class="notice notice-warning"><p><strong>Super Blank Plugin requires the Astra theme.</strong><br>Please go to the <a href="' . network_admin_url('themes.php') . '">Network Admin → Themes</a> and enable it for the network.</p></div>';
+        }
+    }
+}
+
+add_action('admin_notices', 'superBlankCheckAstraTheme');
+add_action('network_admin_notices', 'superBlankCheckAstraTheme');
+
+/**
+ * Check if Elementor plugin is installed and activated
+ * 
+ * @return void
+ */
+if (!function_exists('superBlankCheckElementorPlugin')) {
+    /**
+     * Check if Elementor plugin is installed and activated
+     * 
+     * @return void
+     */
+    function superBlankCheckElementorPlugin()
+    {
+
+        if (!is_multisite()) return;
+
+        // Check if Elementor plugin is installed
+        if (!file_exists(WP_PLUGIN_DIR . '/elementor/elementor.php')) {
+            echo '<div class="notice notice-error"><p><strong>Super Blank Plugin requires the Elementor plugin.</strong><br>Please go to the <a href="' . esc_url( network_admin_url( 'plugin-install.php?s=elementor&tab=search&type=term' ) ) . '">Plugins → Add New</a> and install Elementor.</p></div>';
+            return;
+        }
+
+        // Check if Elementor plugin is activated
+        if (!is_plugin_active('elementor/elementor.php')) {
+            echo '<div class="notice notice-warning"><p><strong>Super Blank Plugin requires the Elementor plugin.</strong><br>Please go to the <a href="' . network_admin_url('plugins.php') . '">Plugins</a> and activate Elementor.</p></div>';
+        }
+    }
+}
+
+add_action('admin_notices', 'superBlankCheckElementorPlugin');
+add_action('network_admin_notices', 'superBlankCheckElementorPlugin');
+
+/**
+ * Check if WPForms plugin is installed and activated
+ * 
+ * @return void
+ */
+if (!function_exists('superBlankCheckWPFormsPlugin')) {
+    /**
+     * Check if WPForms plugin is installed and activated
+     * 
+     * @return void
+     */
+    function superBlankCheckWPFormsPlugin()
+    {
+
+        if (!is_multisite()) return;
+
+        // Check if WPForms plugin is installed
+        if (!file_exists(WP_PLUGIN_DIR . '/wpforms-lite/wpforms.php')) {
+            echo '<div class="notice notice-error"><p><strong>Super Blank Plugin requires the WPForms plugin.</strong><br>Please go to the <a href="' . esc_url( network_admin_url( 'plugin-install.php?s=wpforms&tab=search&type=term' ) ) . '">Plugins → Add New</a> and install WPForms.</p></div>';
+            return;
+        }
+
+        // Check if WPForms plugin is activated
+        if (!is_plugin_active('wpforms-lite/wpforms.php')) {
+            echo '<div class="notice notice-warning"><p><strong>Super Blank Plugin requires the WPForms plugin.</strong><br>Please go to the <a href="' . network_admin_url('plugins.php') . '">Plugins</a> and activate WPForms.</p></div>';
+        }
+    }
+}
+
+add_action('admin_notices', 'superBlankCheckWPFormsPlugin');
+add_action('network_admin_notices', 'superBlankCheckWPFormsPlugin');
+
+if (!function_exists('superBlankCheckRequiredPluginsAndThemes')) {
+    /**
+     * Check if required plugins and themes are installed and activated
+     * 
+     * @return bool
+     */
+    function superBlankCheckRequiredPluginsAndThemes() {
+
+        // If not multisite, return true
+        if (!is_multisite()) return true;
+
+        // Check if Astra theme is installed and activated
+        $astra = wp_get_theme('astra'); // Check if Astra theme exists
+
+        // Astra not installed
+        if (!$astra->exists()) {
+            
+            return false;
+        }
+
+        // Check if Astra theme is allowed for the current site
+        $allowed_themes = get_site_option('allowedthemes');
+
+        // If allowedthemes is empty, all themes are allowed
+        if (empty($allowed_themes)) {
+
+            return false;
+        }
+
+        // Check if Astra is allowed for this site
+        if (!isset($allowed_themes['astra']) || !$allowed_themes['astra']) {
+
+            return false;
+        }
+
+        // Check if Elementor plugin is installed
+        if (!file_exists(WP_PLUGIN_DIR . '/elementor/elementor.php')) {
+
+            return false;
+        }
+
+        // Check if Elementor plugin is activated
+        if (!is_plugin_active('elementor/elementor.php')) {
+            
+            return false;
+        }
+
+        // Check if WPForms plugin is installed
+        if (!file_exists(WP_PLUGIN_DIR . '/wpforms-lite/wpforms.php')) {
+
+            return false;
+        }
+
+        // Check if WPForms plugin is activated
+        if (!is_plugin_active('wpforms-lite/wpforms.php')) {
+            
+            return false;
+        }
+
+        // All checks passed
+        return true;
     }
 }

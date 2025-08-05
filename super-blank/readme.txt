@@ -3,7 +3,7 @@ Contributors: conutant
 Tags: blank template, super blank
 Requires at least: 5.9
 Tested up to: 6.8
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 Requires PHP: 7.4
 License: GNU General Public License v2.0 or later
 
@@ -75,6 +75,10 @@ The best way in the world to make a website. Start from blank, and build any des
 5. Super Blank Sections Collection
 
 == Changelog ==
+
+= 1.3.0 =
+* Security: Fixed an authenticated arbitrary content deletion vulnerability affecting AJAX actions. Thanks to Denver Jackson via Patchstack for responsible disclosure.
+* Added support for WordPress Multisite.
 
 = 1.2.0 =
 * WordPress 6.8 ready. Gutenberg patterns improved

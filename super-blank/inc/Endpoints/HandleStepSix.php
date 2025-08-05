@@ -10,7 +10,7 @@ use WP_REST_Response;
 use WP_Error;
 use SuperBlank\Super_Blank_Source_Local;
 
-class HandleStepSix
+class HandleStepSix extends BaseEndpoint
 {
 
     private $pagesElementor = [
@@ -61,23 +61,20 @@ class HandleStepSix
 
     public function __construct()
     {
-
+        parent::__construct();
         add_action('wp_ajax_super_blank_step6', [$this, 'handle_step']);
     }
 
     public function handle_step()
     {
+        // Check user permissions first
+        if (!$this->checkUserPermissions()) {
+            $this->sendAccessForbiddenError();
+        }
 
-        // Checked POST nonce is not empty.
-        if (empty($_POST['nonce'])) wp_die('0');
-
-        $nonce = sanitize_key(wp_unslash($_POST['nonce']));
-
-        if (!wp_verify_nonce($nonce, 'install_super_blank')) {
-
-            echo wp_json_encode(new WP_Error('error_data', 'Invalid nonce', array('status' => 403)));
-
-            wp_die();
+        // Validate nonce
+        if (!$this->validateNonce()) {
+            $this->sendInvalidNonceError();
         }
 
         /**
@@ -88,12 +85,10 @@ class HandleStepSix
         $this->createPagesElementor();
 
         // Success
-        echo wp_json_encode(new WP_REST_Response([
+        $this->sendSuccessResponse([
             'success' => true,
             'message' => 'Pages creation...'
-        ], 200));
-
-        wp_die();
+        ]);
     }
 
     public function createPagesElementor()

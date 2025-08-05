@@ -37,6 +37,26 @@ if (!function_exists('superBlankPageContent')) {
     function superBlankPageContent()
     {
 ?>
+
+        <?php if (!superBlankCheckRequiredPluginsAndThemes()) : ?>
+
+            <div class="wrap super-blank-admin-page">
+
+                <div class="super-blank-wrap">
+
+                    <span class="super-blank-heading"><?php esc_html_e('Your network is not ready for Super Blank', 'super-blank'); ?></span>
+
+                    <p class="super-blank-description">
+                        <?php esc_html_e('Please install and activate the Astra theme, Elementor plugin, and WPForms plugin.', 'super-blank'); ?>
+                    </p>
+
+                </div>
+            </div>
+
+            <?php return; ?>
+
+        <?php endif; ?>
+
         <div class="wrap super-blank-admin-page">
 
             <div class="super-blank-wrap">
@@ -55,7 +75,7 @@ if (!function_exists('superBlankPageContent')) {
                 </div>
 
                 <!-- Tools -->
-                <div class="super-blank-tools-area">                    
+                <div class="super-blank-tools-area">
 
                     <div class="super-blank-button">
                         <a href="#" class="button" id="super-blank-install"><?php esc_html_e("Let's Do This", 'super-blank'); ?></a>

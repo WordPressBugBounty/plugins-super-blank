@@ -9,28 +9,25 @@ if (!defined('ABSPATH')) {
 use WP_REST_Response;
 use WP_Error;
 
-class HandleStepTwo
+class HandleStepTwo extends BaseEndpoint
 {
 
     public function __construct()
     {
-
+        parent::__construct();
         add_action('wp_ajax_super_blank_step2', [$this, 'handle_step']);
     }
 
     public function handle_step()
     {
+        // Check user permissions first
+        if (!$this->checkUserPermissions()) {
+            $this->sendAccessForbiddenError();
+        }
 
-        // Checked POST nonce is not empty.
-        if (empty($_POST['nonce'])) wp_die('0');
-
-        $nonce = sanitize_key(wp_unslash($_POST['nonce']));
-
-        if (!wp_verify_nonce($nonce, 'install_super_blank')) {
-
-            echo wp_json_encode(new WP_Error('error_data', 'Invalid nonce', array('status' => 403)));
-
-            wp_die();
+        // Validate nonce
+        if (!$this->validateNonce()) {
+            $this->sendInvalidNonceError();
         }
 
         /**
@@ -41,16 +38,16 @@ class HandleStepTwo
         $this->deleteInactivePlugins();
 
         // Success
-        echo wp_json_encode(new WP_REST_Response([
+        $this->sendSuccessResponse([
             'success' => true,
             'message' => 'Getting design ready...'
-        ], 200));
-
-        wp_die();
+        ]);
     }
 
     public function deleteInactivePlugins()
     {
+
+        if(is_multisite()) return;
 
         $all_plugins = get_plugins();
         $active_plugins = get_option('active_plugins');

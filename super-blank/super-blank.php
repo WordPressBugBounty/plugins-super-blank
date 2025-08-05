@@ -5,7 +5,7 @@
  * Description:       The best way in the world to make a website. Start from blank, and build any design you want.
  * Author:            Tyler Moore
  * Author URI:        https://tyler.com/
- * Version:           1.2.0
+ * Version:           1.3.0
  * Text Domain:       super-blank
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
  */
 if (!defined('SUPER_BLANK_PLUGIN_VERSION')) {
 
-    define('SUPER_BLANK_PLUGIN_VERSION', '1.2.0');
+    define('SUPER_BLANK_PLUGIN_VERSION', '1.3.0');
 }
 
 /**

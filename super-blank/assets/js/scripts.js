@@ -224,13 +224,33 @@
 
             },
 
-            stepFailed(_this, error_data, response) {
+            stepFailed(_this, error_data, response) {               
 
                 if (error_data) {
 
                     const message = 'Error on step ' + (_this.count + 1) + ': ' + error_data.join(',');
 
                     _this.failedNotification(message);
+                }
+
+                // Try to parse response as JSON if it's a string
+                if (typeof response === 'string') {
+                    try {
+                        response = JSON.parse(response);
+                    } catch (e) {
+                        // Keep original response if parsing fails
+                    }
+                }
+
+                if(response?.errors) {                    
+
+                    if (response?.errors?.access_forbidden) {
+                        const message = 'Error on step ' + (_this.count + 1) + ': ' + response.errors.access_forbidden.join(',');
+                        _this.failedNotification(message); 
+                    } else {
+                        const message = 'Unexpected error on step ' + (_this.count + 1);
+                        _this.failedNotification(message);
+                    }
                 }
 
                 _this.consoleLog('Here is an error: ', response);
@@ -255,9 +275,10 @@
 
             checkResponse(serverResponse) {
 
-                return serverResponse.includes("Have fun!") || 
-                serverResponse.includes("translation") ||
-                serverResponse.includes("update-messages");
+                return serverResponse.includes("Have fun!")
+                || serverResponse.includes("translation")
+                || serverResponse.includes("update-messages")
+                || serverResponse.includes("javascript:history.back()");
             },
 
             startInstall: function () {
