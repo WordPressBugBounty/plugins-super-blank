@@ -68,9 +68,6 @@ class HandleStepOneTwo extends BaseEndpoint
             'woocommerce%',
             '%woocommerce',
             '%woocommerce%',
-            'jetpack%',
-            '%jetpack',
-            '%jetpack%',
         ];
 
         superBlankDeleteOptionsByPattern($patterns);

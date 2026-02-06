@@ -99,25 +99,27 @@ class HandleStepOne extends BaseEndpoint
         if(is_multisite()) return;
 
         $active_plugins = get_option('active_plugins');
-        $plugins_to_keep = [
-            'super-blank/super-blank.php',
-            'elementor-json-to-php/elementor-json-to-php.php',
-            'super-blank-options-cleanup/super-blank-options-cleanup.php',
-        ];
 
         foreach ($active_plugins as $plugin) {
 
-            if (!in_array($plugin, $plugins_to_keep)) {
+            // Keep super-blank plugin
+            if ($plugin === 'super-blank/super-blank.php') {
+                continue;
+            }
 
-                if (!function_exists('deactivate_plugins')) {
+            // Keep all jetpack-* plugins
+            if (strpos($plugin, 'jetpack') === 0) {
+                continue;
+            }
 
-                    require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-                }
+            if (!function_exists('deactivate_plugins')) {
 
-                if (function_exists('deactivate_plugins')) {
+                require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+            }
 
-                    deactivate_plugins($plugin);
-                }
+            if (function_exists('deactivate_plugins')) {
+
+                deactivate_plugins($plugin);
             }
         }
 

@@ -356,8 +356,8 @@ if (!function_exists('superBlankDeleteExactOptions')) {
         $placeholders = implode(',', array_fill(0, count($options), '%s'));
 
         $sql = $wpdb->prepare(
-            "DELETE FROM {$wpdb->options} WHERE option_name IN ($placeholders)",
-            $options
+            "DELETE FROM {$wpdb->options} WHERE option_name IN ($placeholders) AND option_name NOT LIKE %s",
+            array_merge($options, ['%jetpack%'])
         );
 
         return $wpdb->query($sql);
@@ -382,8 +382,9 @@ if (!function_exists('superBlankDeleteOptionsByPattern')) {
         foreach ($patterns as $pattern) {
 
             $sql = $wpdb->prepare(
-                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
-                $pattern
+                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s AND option_name NOT LIKE %s",
+                $pattern,
+                '%jetpack%'
             );
 
             $wpdb->query($sql);
